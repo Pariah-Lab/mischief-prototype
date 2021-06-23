@@ -79,8 +79,6 @@
     <Compile Include="Assets\MoveMeRotateMe\RotatorScript.cs" />
     <Compile Include="Assets\MultiTag\Taggable.cs" />
     <Compile Include="Assets\MultiTag\TagsHolder.cs" />
-    <Compile Include="Assets\ObjectPooler.cs" />
-    <Compile Include="Assets\OnTriggerActions.cs" />
     <Compile Include="Assets\ParticlesManagement\GameParticlesHolder.cs" />
     <Compile Include="Assets\ParticlesManagement\ParticleWorker.cs" />
     <Compile Include="Assets\PopupCanvas\IPopupable.cs" />
@@ -95,7 +93,6 @@
     <Compile Include="Assets\ProceduralUIImage\Scripts\Modifiers\UniformModifier.cs" />
     <Compile Include="Assets\ProceduralUIImage\Scripts\ProceduralImage.cs" />
     <Compile Include="Assets\ProceduralUIImage\Scripts\ProceduralImageModifier.cs" />
-    <Compile Include="Assets\RatSpawnerHandler.cs" />
     <Compile Include="Assets\SliderBasedSelection\ShopItemsHandler.cs" />
     <Compile Include="Assets\SliderBasedSelection\SlideItemsHandler.cs" />
     <Compile Include="Assets\SliderBasedSelection\WeaponSettings.cs" />
@@ -104,8 +101,6 @@
     <Compile Include="Assets\SoundDropDown\Scripts\SoundIndexerHolder.cs" />
     <Compile Include="Assets\SoundDropDown\Scripts\Sounder.cs" />
     <Compile Include="Assets\SoundDropDown\Scripts\SounderMixer.cs" />
-    <Compile Include="Assets\SwarmManager.cs" />
-    <Compile Include="Assets\Utility.cs" />
     <Compile Include="Assets\_01Scripts\ActivateDeactivateMe.cs" />
     <Compile Include="Assets\_01Scripts\BlipManager.cs" />
     <Compile Include="Assets\_01Scripts\Boid.cs" />
@@ -152,9 +147,14 @@
     <Compile Include="Assets\_01Scripts\Interfaces\ISwarmManager.cs" />
     <Compile Include="Assets\_01Scripts\Interfaces\ISwarmable.cs" />
     <Compile Include="Assets\_01Scripts\MischievousRatController.cs" />
+    <Compile Include="Assets\_01Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\_01Scripts\OnAnimationEndPopup.cs" />
     <Compile Include="Assets\_01Scripts\OnEnableAction.cs" />
+    <Compile Include="Assets\_01Scripts\OnTriggerActions.cs" />
     <Compile Include="Assets\_01Scripts\RatCharacterController.cs" />
+    <Compile Include="Assets\_01Scripts\RatSpawnerHandler.cs" />
+    <Compile Include="Assets\_01Scripts\SwarmManager.cs" />
+    <Compile Include="Assets\_01Scripts\Utility.cs" />
     <Compile Include="Assets\_01Scripts\Visualization.cs" />
     <Compile Include="Assets\_02Scripts\MoveMe.cs" />
     <Compile Include="Assets\_02Scripts\RotateMe.cs" />

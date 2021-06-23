@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class destruction : MonoBehaviour {
+public class destruction : MonoBehaviour , IDestructible
+{
 	public GameObject[] Chunks;
 	public GameObject[] HidingObjs; //list of the objects that will be hidden after the crush.
 	[Range(1,100)]
@@ -52,15 +53,16 @@ public class destruction : MonoBehaviour {
 		}
 		}
 
-	void TakeDamage(int DamageAmount)
+	public void TakeDamage(int DamageAmount, IMischievable mischievable)
     {
 		Health = Health - DamageAmount;
-
+		Debug.Log("Taking damage");
 		// We should also check if the health is still greater than 0
 		// in order to determine whether this should be destroyed
 		if (Health < 0)
         {
 			Crushing();
+			mischievable.AddToMischief(30);
         }
     }
 
@@ -77,7 +79,6 @@ public class destruction : MonoBehaviour {
 			GetComponent<AudioSource>().Play ();
 		}
 
-		addToMischief();
 		GetComponent<Renderer>().enabled = false;
 		GetComponent<Collider>().enabled = false;
 		GetComponent<Rigidbody>().isKinematic = true;
@@ -95,7 +96,7 @@ public class destruction : MonoBehaviour {
 	void addToMischief ()
     {
 		GameObject ratObject;
-		ratObject = GameObject.FindGameObjectWithTag("MischievousRat");
+		ratObject = GameObject.FindGameObjectWithTag("MRat");
 
 		MischievousRatController script = ratObject.GetComponent<MischievousRatController>();
 		script.mischiefTotal += 10;
